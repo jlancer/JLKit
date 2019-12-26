@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIColor *)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout colorForSectionAtIndex:(NSInteger)section;
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout leftForSectionAtIndex:(NSInteger)section;
+
 @end
 
 @interface JLSectionColorLayout : UICollectionViewFlowLayout

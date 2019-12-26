@@ -51,8 +51,8 @@
     NSInteger sections = [self.collectionView numberOfSections];
     id<UICollectionSectionColorLayout> delegate = self.collectionView.delegate;
     if ([delegate respondsToSelector:@selector(collectionView:layout:colorForSectionAtIndex:)]) {
-    }else{
-        return ;
+    } else {
+        return;
     }
     
     //1.初始化
@@ -74,7 +74,7 @@
                 }
             }
             
-            
+            CGFloat x = [delegate collectionView:self.collectionView layout:self leftForSectionAtIndex:section];
             CGRect sectionFrame = CGRectUnion(firstAttr.frame, lastAttr.frame);
             sectionFrame.origin.x -= sectionInset.left;
             sectionFrame.origin.y -= sectionInset.top;
@@ -82,8 +82,8 @@
                 sectionFrame.size.width += sectionInset.left + sectionInset.right;
                 sectionFrame.size.height = self.collectionView.frame.size.height;
             }else{
-                sectionFrame.origin.x = 32;
-                sectionFrame.size.width = self.collectionView.frame.size.width - 32 * 2;
+                sectionFrame.origin.x = x;
+                sectionFrame.size.width = self.collectionView.frame.size.width - x * 2;
                 sectionFrame.size.height += sectionInset.top + sectionInset.bottom;
             }
             
