@@ -91,6 +91,9 @@
 		C98B8BC02371663C00591191 /* JLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B8BBF2371663C00591191 /* JLCollectionView.m */; };
 		C98B8BC823716AF400591191 /* JLSectionColorLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B8BC723716AF400591191 /* JLSectionColorLayout.m */; };
 		C98B8BCB23716D9300591191 /* JLBannerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B8BCA23716D9300591191 /* JLBannerFlowLayout.m */; };
+		C9A4562B256C9EF100B5BD21 /* EnvironmentChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A4562A256C9EF100B5BD21 /* EnvironmentChooseView.m */; };
+		C9A45631256C9FB300B5BD21 /* EnvironmentChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A45630256C9FB300B5BD21 /* EnvironmentChooseView.xib */; };
+		C9A45669256CBA4500B5BD21 /* APIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A45668256CBA4500B5BD21 /* APIConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -257,6 +260,11 @@
 		C98B8BC723716AF400591191 /* JLSectionColorLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSectionColorLayout.m; sourceTree = "<group>"; };
 		C98B8BC923716D9300591191 /* JLBannerFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBannerFlowLayout.h; sourceTree = "<group>"; };
 		C98B8BCA23716D9300591191 /* JLBannerFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBannerFlowLayout.m; sourceTree = "<group>"; };
+		C9A45629256C9EF100B5BD21 /* EnvironmentChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnvironmentChooseView.h; sourceTree = "<group>"; };
+		C9A4562A256C9EF100B5BD21 /* EnvironmentChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnvironmentChooseView.m; sourceTree = "<group>"; };
+		C9A45630256C9FB300B5BD21 /* EnvironmentChooseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnvironmentChooseView.xib; sourceTree = "<group>"; };
+		C9A45667256CBA4500B5BD21 /* APIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		C9A45668256CBA4500B5BD21 /* APIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +344,7 @@
 				C94290DA23702DA5004C3456 /* JLStorage */,
 				C94290C023700A31004C3456 /* JLController */,
 				C93D557A2367D9600011741B /* JLCategory */,
+				C9A4562E256C9F0F00B5BD21 /* JLAPIConfig */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -760,6 +769,18 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		C9A4562E256C9F0F00B5BD21 /* JLAPIConfig */ = {
+			isa = PBXGroup;
+			children = (
+				C9A45667256CBA4500B5BD21 /* APIConfig.h */,
+				C9A45668256CBA4500B5BD21 /* APIConfig.m */,
+				C9A45629256C9EF100B5BD21 /* EnvironmentChooseView.h */,
+				C9A4562A256C9EF100B5BD21 /* EnvironmentChooseView.m */,
+				C9A45630256C9FB300B5BD21 /* EnvironmentChooseView.xib */,
+			);
+			path = JLAPIConfig;
+			sourceTree = "<group>";
+		};
 		D95B2AB30A2DA0AEE14D0475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +801,7 @@
 				C93D55592367D6300011741B /* Frameworks */,
 				C93D555A2367D6300011741B /* Resources */,
 				07428C29E5675B48CFB76277 /* [CP] Embed Pods Frameworks */,
+				C9A4566D256CD68C00B5BD21 /* Git Branch Run Script */,
 			);
 			buildRules = (
 			);
@@ -836,6 +858,7 @@
 				C93D556C2367D6320011741B /* Assets.xcassets in Resources */,
 				C93D556A2367D6300011741B /* Main.storyboard in Resources */,
 				C93D55972367D97C0011741B /* JLKit.podspec in Resources */,
+				C9A45631256C9FB300B5BD21 /* EnvironmentChooseView.xib in Resources */,
 				C98B8BA7237155CF00591191 /* diyloading_circle.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,6 +905,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C9A4566D256CD68C00B5BD21 /* Git Branch Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Git Branch Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n#当前的分支\ngit_branch=$(git symbolic-ref --short -q HEAD)\n\n#获取App安装包下的info.plist文件路径\ninfo_plist=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist\"\n\n#利用PlistBuddy改变info.plist的值\n/usr/libexec/PlistBuddy -c \"Set :'GitCommitBranch'    '${git_branch}'\"                 \"${info_plist}\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -900,6 +941,7 @@
 				C98B8B9323714F3B00591191 /* JLTableView.m in Sources */,
 				C94290AF236FCE88004C3456 /* UIViewController+Addition_JL.m in Sources */,
 				C93D55A22367E09C0011741B /* UIFont+Addition_JL.m in Sources */,
+				C9A4562B256C9EF100B5BD21 /* EnvironmentChooseView.m in Sources */,
 				C98B8B9B237154C600591191 /* JLDIYBackFooter.m in Sources */,
 				C98B8B672371224200591191 /* JLMapNavManager.m in Sources */,
 				C93D55D1236809C50011741B /* UITabBar+Badge_JL.m in Sources */,
@@ -957,6 +999,7 @@
 				C93DF6E3236A793300E39C13 /* AppDelegate+Addition_JL.m in Sources */,
 				C98B8BAC237161FC00591191 /* JLToastView.m in Sources */,
 				C98B8BC02371663C00591191 /* JLCollectionView.m in Sources */,
+				C9A45669256CBA4500B5BD21 /* APIConfig.m in Sources */,
 				C98B8B7D2371292000591191 /* JLCityGroupTableViewController.m in Sources */,
 				C98B8B9023714B9000591191 /* JLTableHeaderFooterView.m in Sources */,
 				C93D55AE2367E5A60011741B /* UIResponder+Addition_JL.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EnvironmentChooseView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [EnvironmentChooseView showOn:self.view finished:^{
+            NSLog(@"修改了");
+        }];;
+    });
+    
 }
 
 

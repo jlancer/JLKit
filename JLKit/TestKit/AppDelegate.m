@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NSDate+Addition_JL.h"
+#import "APIConfig.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"%@", [[NSDate date] jl_stringWithFormat:NSDateHelperFormatFullDateWithTime]);
+    
+    NSLog(@"当前HOST：%@", [APIConfig baseURL]);
     return YES;
 }
 

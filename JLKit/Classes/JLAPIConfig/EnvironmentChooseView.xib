@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EnvironmentChooseView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U4n-8Z-6Hp">
+                    <rect key="frame" x="16" y="141" width="382" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Gfu-qq-Doc"/>
+                    </constraints>
+                    <segments>
+                        <segment title="测试"/>
+                        <segment title="生产"/>
+                        <segment title="自定义"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sT-1L-FNh">
+                    <rect key="frame" x="16" y="76" width="56" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.test.com/" borderStyle="roundedRect" placeholder="自定义URL，比如https://dev.55haitao.com/" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8w-81-WaE">
+                    <rect key="frame" x="16" y="191" width="382" height="30"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Ftr-Ps-qRi"/>
+                    </constraints>
+                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-Lm-3iT">
+                    <rect key="frame" x="16" y="269" width="382" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="dde-nT-M2W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-Aa-Dqy">
+                    <rect key="frame" x="16" y="345" width="382" height="44"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ien-Em-3gP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP会退出，请自行启动APP后随即生效" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-dY-6UA">
+                    <rect key="frame" x="133.5" y="317" width="147" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EsV-dY-6UA" firstAttribute="top" secondItem="Np8-Lm-3iT" secondAttribute="bottom" constant="4" id="4t6-Vr-O3K"/>
+                <constraint firstItem="EsV-dY-6UA" firstAttribute="centerX" secondItem="Np8-Lm-3iT" secondAttribute="centerX" id="5ta-rJ-mlx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Np8-Lm-3iT" secondAttribute="trailing" constant="16" id="6dD-ZT-BEd"/>
+                <constraint firstItem="2sT-1L-FNh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GxO-ZY-caW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w8w-81-WaE" secondAttribute="trailing" constant="16" id="QDD-WF-QjS"/>
+                <constraint firstItem="w8w-81-WaE" firstAttribute="top" secondItem="U4n-8Z-6Hp" secondAttribute="bottom" constant="20" id="RNt-nw-LMV"/>
+                <constraint firstItem="qCi-Aa-Dqy" firstAttribute="top" secondItem="Np8-Lm-3iT" secondAttribute="bottom" constant="32" id="SdG-Aw-ahi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qCi-Aa-Dqy" secondAttribute="trailing" constant="16" id="TCS-Ys-LfR"/>
+                <constraint firstItem="U4n-8Z-6Hp" firstAttribute="top" secondItem="2sT-1L-FNh" secondAttribute="bottom" constant="48" id="Tqp-Ha-tBV"/>
+                <constraint firstItem="Np8-Lm-3iT" firstAttribute="top" secondItem="w8w-81-WaE" secondAttribute="bottom" constant="48" id="cad-Vw-1Hs"/>
+                <constraint firstItem="qCi-Aa-Dqy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="crC-gv-z3q"/>
+                <constraint firstItem="2sT-1L-FNh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="gDO-bO-ffO"/>
+                <constraint firstItem="w8w-81-WaE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hTa-PC-J1L"/>
+                <constraint firstItem="U4n-8Z-6Hp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="itx-AE-xW0"/>
+                <constraint firstItem="Np8-Lm-3iT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wut-ce-Rev"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U4n-8Z-6Hp" secondAttribute="trailing" constant="16" id="zE2-zQ-DCj"/>
+            </constraints>
+            <connections>
+                <outlet property="closeButton" destination="qCi-Aa-Dqy" id="yh1-BW-hIE"/>
+                <outlet property="okButton" destination="Np8-Lm-3iT" id="DwW-RZ-COH"/>
+                <outlet property="segmentedControl" destination="U4n-8Z-6Hp" id="Odg-EU-Iv8"/>
+                <outlet property="urlTextField" destination="w8w-81-WaE" id="1zd-vi-0uE"/>
+            </connections>
+            <point key="canvasLocation" x="106" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
