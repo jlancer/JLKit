@@ -23,13 +23,15 @@
 #endif
 
 // iPhone4,4S       分辨率320x480，像素分别320x480和640x960，@1x，@2x
-// iPhone5,5S       分辨率320x568，像素640x1136，@2x
-// iPhone6\7\8      分辨率375x667，像素750x1334，@2x
+// iPhone5,5S,SE    分辨率320x568，像素640x1136，@2x
+// iPhone6\7\8\SE2  分辨率375x667，像素750x1334，@2x
 // iPhone6\7\8 Plus 分辨率414x736，像素1242x2208，@3x
 
-// iPhoneX/XS       分辨率375x812，像素1125x2436，@3x
-// iPhoneXMax       分辨率414x896，像素1242x2688，@3x
-// iPhoneXR         分辨率414x896，像素828x1792，@2x
+// iPhoneX\XS\11Pro\12mini 分辨率375x812，像素1125x2436，@3x
+// iPhoneXMax\11ProMax     分辨率414x896，像素1242x2688，@3x
+// iPhoneXR\11             分辨率414x896，像素828x1792，@2x
+// iPhone12\12Pro          分辨率390x844，像素1170x2532，@3x
+// iPhone12ProMax          分辨率428x926，像素1284x2778，@3x
 
 #define UI_I4_WIDTH                     (320.0)
 #define UI_I4_HEIGHT                    (480.0)
@@ -45,6 +47,10 @@
 #define UI_IPXMAX_HEIGHT                (896.0)
 #define UI_IPXR_WIDTH                   (414.0)
 #define UI_IPXR_HEIGHT                  (896.0)
+#define UI_IP12_WIDTH                   (390.0)
+#define UI_IP12_HEIGHT                  (844.0)
+#define UI_IP12ProMax_WIDTH             (428.0)
+#define UI_IP12ProMax_HEIGHT            (926.0)
 
 // 屏幕高宽
 #define UI_SCREEN_WIDTH                 ([[UIScreen mainScreen] bounds].size.width)
@@ -78,9 +84,13 @@
 #define IS_IPHONE_Xr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
 //判断iPhoneXsMax
 #define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size)&& !isPad : NO)
+//判断iPhone12\12Pro
+#define IS_IPHONE_12_Pro ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1170, 2532), [[UIScreen mainScreen] currentMode].size)&& !isPad : NO)
+//判断iPhone12ProMax
+#define IS_IPHONE_12_Pro_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1284, 2778), [[UIScreen mainScreen] currentMode].size)&& !isPad : NO)
 
 //判断iPhoneX所有系列
-#define IS_PhoneXAll (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_Xs_Max)
+#define IS_PhoneXAll (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_Xs_Max || IS_IPHONE_12_Pro || IS_IPHONE_12_Pro_Max)
 #define k_Height_NavContentBar 44.0f
 #define k_Height_StatusBar (IS_PhoneXAll? 44.0 : 20.0)
 #define k_Height_NavBar (IS_PhoneXAll ? 88.0 : 64.0)
